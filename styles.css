@@ -1,19 +1,23 @@
-/* VSK Interiors - Custom Styling System */
+/* VSK Interiors - Premium White & Gold Design System */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap');
 
 :root {
-  --primary-amber: #d97706;
-  --primary-gold: #f59e0b;
+  --primary-gold: #d97706;
+  --bright-gold: #f59e0b;
   --dark-gold: #b45309;
-  --luxury-black: #090d16;
-  --luxury-slate: #0f172a;
-  --warm-bg: #fafaf9;
+  --deep-gold: #92400e;
+  --light-gold-bg: #fffbeb;
+  --gold-border: rgba(217, 119, 6, 0.3);
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  --pure-white: #ffffff;
+  --cream-bg: #fafaf9;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f8fafc;
-  color: #1e293b;
+  background-color: #ffffff !important;
+  color: #0f172a !important;
   overflow-x: hidden;
 }
 
@@ -25,49 +29,44 @@ body {
   font-family: 'Outfit', sans-serif;
 }
 
-/* Gold Gradient Text */
+/* Rich Gold Gradient Text for Light Backgrounds */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%);
+  background: linear-gradient(135deg, #d97706 0%, #b45309 60%, #78350f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-gold-gradient {
-  background: linear-gradient(135deg, #fbbf24 0%, #d97706 70%, #92400e 100%);
+  background: linear-gradient(135deg, #d97706 0%, #b45309 70%, #78350f 100%) !important;
 }
 
 .bg-gold-glow {
-  box-shadow: 0 10px 30px -5px rgba(217, 119, 6, 0.4);
+  box-shadow: 0 10px 30px -5px rgba(217, 119, 6, 0.3);
 }
 
+/* Bright Luxury White & Gold Hero Background */
 .hero-gradient {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.88) 0%, rgba(9, 13, 22, 0.94) 100%),
-              url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  background: linear-gradient(135deg, #ffffff 0%, #fffbeb 50%, #fef3c7 100%) !important;
 }
 
-/* Glassmorphism Cards */
+/* White & Gold Glassmorphism Cards */
 .glass-card {
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #ffffff !important;
+  border: 2px solid rgba(217, 119, 6, 0.3) !important;
+  box-shadow: 0 20px 40px -15px rgba(217, 119, 6, 0.15) !important;
 }
 
-.glass-card-light {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-}
-
-/* Service Card Lift Effect */
+/* Service & Portfolio Card Lift Effect */
 .service-card {
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.18);
+  box-shadow: 0 25px 50px -12px rgba(217, 119, 6, 0.25) !important;
+  border-color: rgba(217, 119, 6, 0.5) !important;
 }
 
 /* Hide Scrollbars */
@@ -79,20 +78,20 @@ body {
   scrollbar-width: none;
 }
 
-/* Custom Scrollbar for smooth page scroll */
+/* Custom Gold Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #fafaf9;
 }
 ::-webkit-scrollbar-thumb {
   background: #d97706;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #f59e0b;
+  background: #b45309;
 }
 
 /* Interactive Before/After Comparison Slider */
@@ -103,6 +102,8 @@ body {
   overflow: hidden;
   border-radius: 1.5rem;
   user-select: none;
+  border: 2px solid rgba(217, 119, 6, 0.3);
+  box-shadow: 0 20px 40px -10px rgba(217, 119, 6, 0.2);
 }
 
 .ba-image {
@@ -129,10 +130,10 @@ body {
   bottom: 0;
   left: 50%;
   width: 4px;
-  background: #ffffff;
+  background: #d97706;
   cursor: ew-resize;
   z-index: 20;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 12px rgba(217, 119, 6, 0.6);
 }
 
 .ba-handle-button {
@@ -143,12 +144,12 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #d97706;
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.6);
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.5);
   border: 2px solid white;
 }
 
@@ -208,8 +209,8 @@ body {
   padding: 16px 24px;
   border-radius: 12px;
   color: white;
-  font-weight: 500;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   animation: toastIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
@@ -233,6 +234,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+  background-color: rgba(15, 23, 42, 0.6);
 }
 
 .modal-backdrop.active {
@@ -243,13 +245,16 @@ body {
 .modal-content {
   transform: scale(0.95) translateY(20px);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #ffffff !important;
+  border: 2px solid rgba(217, 119, 6, 0.3) !important;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25) !important;
 }
 
 .modal-backdrop.active .modal-content {
   transform: scale(1) translateY(0);
 }
 
-/* Range Input Luxury Styling */
+/* Range Input Luxury Gold Styling */
 input[type="range"] {
   accent-color: #d97706;
 }
