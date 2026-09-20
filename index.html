@@ -31,7 +31,6 @@
      </div>
      <nav class="hidden md:flex space-x-8">
       <a href="#services" class="text-gray-700 hover:text-amber-600 font-medium transition">Services</a>
-      <a href="#estimator" class="text-gray-700 hover:text-amber-600 font-medium transition">Cost Estimator</a>
       <a href="#portfolio" class="text-gray-700 hover:text-amber-600 font-medium transition">Portfolio</a>
       <a href="#transformation" class="text-gray-700 hover:text-amber-600 font-medium transition">Before/After</a>
       <a href="#contact" class="text-gray-700 hover:text-amber-600 font-medium transition">Contact</a>
@@ -197,86 +196,6 @@
        </div>
       </div>
 
-     </div>
-    </div>
-   </section>
-
-   <!-- Budget Estimator Calculator -->
-   <section id="estimator" class="py-20 bg-white border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center max-w-3xl mx-auto mb-14">
-      <span class="text-amber-600 text-xs font-bold uppercase tracking-widest px-3 py-1 bg-amber-50 rounded-full border border-amber-200">Interactive Calculator</span>
-      <h3 class="text-4xl font-bold heading-font text-gray-900 mt-3">Interior Cost Estimator</h3>
-      <p class="text-gray-600 mt-2 text-lg">Calculate estimated budget for your home interior in Chennai in real-time.</p>
-     </div>
-
-     <div class="grid lg:grid-cols-12 gap-8 items-start">
-      <div class="lg:col-span-8 bg-gray-50 rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-sm space-y-6">
-       <div>
-        <label class="block text-sm font-semibold text-gray-800 mb-2">1. Select Property Configuration</label>
-        <select id="est-property" class="w-full bg-white border border-gray-300 text-gray-900 rounded-lg px-4 py-3 focus:ring-2 focus:ring-amber-500">
-         <option value="1">1 BHK Apartment (~500 sq.ft)</option>
-         <option value="1.45" selected>2 BHK Apartment (~900 sq.ft)</option>
-         <option value="1.9">3 BHK Apartment (~1300 sq.ft)</option>
-         <option value="2.6">4 BHK / Independent Villa (~2000 sq.ft)</option>
-         <option value="1.2">Commercial Office / Studio Space</option>
-        </select>
-       </div>
-       <div>
-        <label class="block text-sm font-semibold text-gray-800 mb-2">2. Select Quality Package</label>
-        <select id="est-tier" class="w-full bg-white border border-gray-300 text-gray-900 rounded-lg px-4 py-3 focus:ring-2 focus:ring-amber-500">
-         <option value="0.85">Essential Tier (Commercial Plywood + High Gloss Laminate)</option>
-         <option value="1.0" selected>Premium Tier (100% BWR Marine Plywood + Acrylic / Soft Close Hardware)</option>
-         <option value="1.35">Luxury Tier (BWR Plywood + PU Paint / Tinted Glass + Blum Fittings)</option>
-        </select>
-       </div>
-       <div>
-        <label class="block text-sm font-semibold text-gray-800 mb-3">3. Choose Spaces to Include</label>
-        <div class="grid sm:grid-cols-2 gap-3">
-         <label class="flex items-center p-3 rounded-lg bg-white border border-gray-200 hover:border-amber-500 cursor-pointer">
-          <input type="checkbox" class="est-room-check rounded text-amber-600 focus:ring-amber-500 w-4 h-4 border-gray-300" data-base-price="130000" data-room-name="Modular Kitchen" checked>
-          <span class="ml-3 text-xs text-gray-800 font-medium">Modular Kitchen (Cabinetry + Baskets)</span>
-         </label>
-         <label class="flex items-center p-3 rounded-lg bg-white border border-gray-200 hover:border-amber-500 cursor-pointer">
-          <input type="checkbox" class="est-room-check rounded text-amber-600 focus:ring-amber-500 w-4 h-4 border-gray-300" data-base-price="95000" data-room-name="Master Wardrobe" checked>
-          <span class="ml-3 text-xs text-gray-800 font-medium">Master Bedroom Wardrobe</span>
-         </label>
-         <label class="flex items-center p-3 rounded-lg bg-white border border-gray-200 hover:border-amber-500 cursor-pointer">
-          <input type="checkbox" class="est-room-check rounded text-amber-600 focus:ring-amber-500 w-4 h-4 border-gray-300" data-base-price="55000" data-room-name="Living TV Unit" checked>
-          <span class="ml-3 text-xs text-gray-800 font-medium">Living Room TV Unit & Louvers</span>
-         </label>
-         <label class="flex items-center p-3 rounded-lg bg-white border border-gray-200 hover:border-amber-500 cursor-pointer">
-          <input type="checkbox" class="est-room-check rounded text-amber-600 focus:ring-amber-500 w-4 h-4 border-gray-300" data-base-price="75000" data-room-name="Guest Wardrobe" checked>
-          <span class="ml-3 text-xs text-gray-800 font-medium">2nd Bedroom Wardrobe</span>
-         </label>
-         <label class="flex items-center p-3 rounded-lg bg-white border border-gray-200 hover:border-amber-500 cursor-pointer">
-          <input type="checkbox" class="est-room-check rounded text-amber-600 focus:ring-amber-500 w-4 h-4 border-gray-300" data-base-price="45000" data-room-name="False Ceiling & Profile Lights">
-          <span class="ml-3 text-xs text-gray-800 font-medium">False Ceiling & Profile Lighting</span>
-         </label>
-         <label class="flex items-center p-3 rounded-lg bg-white border border-gray-200 hover:border-amber-500 cursor-pointer">
-          <input type="checkbox" class="est-room-check rounded text-amber-600 focus:ring-amber-500 w-4 h-4 border-gray-300" data-base-price="35000" data-room-name="Crockery Unit & Dining Accent">
-          <span class="ml-3 text-xs text-gray-800 font-medium">Crockery Unit & Dining Wall Accent</span>
-         </label>
-        </div>
-       </div>
-      </div>
-
-      <div class="lg:col-span-4 bg-amber-50 rounded-2xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
-       <h4 class="text-lg font-bold text-gray-900 heading-font border-b border-amber-200 pb-3">Estimated Investment</h4>
-       <div>
-        <div class="text-xs uppercase tracking-wider text-amber-800 font-bold">Approximate Budget</div>
-        <div id="est-total-price" class="text-3xl sm:text-4xl font-extrabold text-amber-700 heading-font my-1">₹3,55,000</div>
-        <p id="est-breakdown" class="text-xs text-gray-600">Includes 3 selected items</p>
-       </div>
-       <div class="space-y-2 text-xs text-gray-700 border-t border-amber-200 pt-4">
-        <div class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Free 3D Design Renders</div>
-        <div class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> 10 Years Material Warranty</div>
-        <div class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> GST & Transport Included</div>
-       </div>
-       <a id="est-whatsapp-btn" href="#" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-lg flex items-center justify-center gap-2 transition shadow text-sm">
-        <span>Send Estimate to WhatsApp</span>
-       </a>
-      </div>
      </div>
     </div>
    </section>
@@ -472,7 +391,6 @@
        <h5 class="text-lg font-bold mb-4 text-white">Quick Links</h5>
        <ul class="space-y-2 text-gray-400 text-sm">
         <li><a href="#services" class="hover:text-amber-400 transition">Services</a></li>
-        <li><a href="#estimator" class="hover:text-amber-400 transition">Cost Estimator</a></li>
         <li><a href="#portfolio" class="hover:text-amber-400 transition">Portfolio</a></li>
         <li><a href="#contact" class="hover:text-amber-400 transition">Contact</a></li>
        </ul>

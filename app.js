@@ -534,53 +534,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Interactive Budget Estimator Engine ---
-  const estProperty = document.getElementById('est-property');
-  const estTier = document.getElementById('est-tier');
-  const estCheckboxes = document.querySelectorAll('.est-room-check');
-  const estTotalPrice = document.getElementById('est-total-price');
-  const estBreakdown = document.getElementById('est-breakdown');
-  const estWhatsappBtn = document.getElementById('est-whatsapp-btn');
-
-  function calculateEstimate() {
-    if (!estProperty || !estTier || !estTotalPrice) return;
-
-    const propMult = parseFloat(estProperty.value) || 1;
-    const tierMult = parseFloat(estTier.value) || 1;
-
-    let baseSelectedCost = 0;
-    let selectedList = [];
-
-    estCheckboxes.forEach(chk => {
-      if (chk.checked) {
-        const cost = parseFloat(chk.getAttribute('data-base-price')) || 0;
-        baseSelectedCost += cost;
-        selectedList.push(chk.getAttribute('data-room-name'));
-      }
-    });
-
-    const total = Math.round(baseSelectedCost * propMult * tierMult);
-    const formatted = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(total);
-
-    estTotalPrice.textContent = formatted;
-    if (estBreakdown) {
-      estBreakdown.textContent = `Includes ${selectedList.length} items (${selectedList.slice(0, 3).join(', ')}${selectedList.length > 3 ? '...' : ''})`;
-    }
-
-    if (estWhatsappBtn) {
-      const propText = estProperty.options[estProperty.selectedIndex].text;
-      const tierText = estTier.options[estTier.selectedIndex].text;
-      const msg = `Hi VSK Interiors, I calculated an estimate of approximately ${formatted} for my ${propText} (${tierText} Package) including: ${selectedList.join(', ')}. Please send me detailed quotation details.`;
-      estWhatsappBtn.href = `https://wa.me/918838635463?text=${encodeURIComponent(msg)}`;
-    }
-  }
-
-  if (estProperty && estTier) {
-    estProperty.addEventListener('change', calculateEstimate);
-    estTier.addEventListener('change', calculateEstimate);
-    estCheckboxes.forEach(c => c.addEventListener('change', calculateEstimate));
-    calculateEstimate();
-  }
 
   // --- Interactive Before/After Slider ---
   const baContainer = document.getElementById('ba-container');
