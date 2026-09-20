@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="vsk-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="50%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#92400e" />
+    </linearGradient>
+    <linearGradient id="vsk-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer Ring Shield -->
+  <rect x="15" y="15" width="170" height="170" rx="36" fill="url(#vsk-dark)" stroke="url(#vsk-gold)" stroke-width="3" filter="url(#shadow)"/>
+  
+  <!-- Architectural Roof Line & Wall -->
+  <path d="M 100 42 L 152 82 L 140 82 L 140 148 L 60 148 L 60 82 L 48 82 Z" fill="none" stroke="url(#vsk-gold)" stroke-width="4" stroke-linejoin="round"/>
+  
+  <!-- Stylized VSK Geometric Monogram -->
+  <!-- V -->
+  <path d="M 70 90 L 85 125 L 100 90" fill="none" stroke="url(#vsk-gold)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- S -->
+  <path d="M 118 92 C 118 88, 104 88, 104 98 C 104 110, 118 108, 118 120 C 118 130, 102 130, 102 124" fill="none" stroke="url(#vsk-gold)" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- K -->
+  <path d="M 128 90 L 128 128 M 142 90 L 128 108 L 144 128" fill="none" stroke="url(#vsk-gold)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Bottom Luxury Accent Star -->
+  <polygon points="100,136 102,142 108,142 103,146 105,152 100,148 95,152 97,146 92,142 98,142" fill="url(#vsk-gold)"/>
+</svg>
