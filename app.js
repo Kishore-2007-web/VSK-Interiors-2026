@@ -1,8 +1,9 @@
 /* VSK Interiors - Interactive Application Script */
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --- Portfolio Data Store ---
+  // --- Portfolio Data Store with Real Project List & Fallbacks ---
   const portfolioData = [
+    // --- Unsplash Curated Highlights ---
     {
       id: 1,
       title: "Luxury Acrylic Modular Kitchen",
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
       year: "2024",
       location: "Ambattur OT, Chennai",
       img: "https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=1200&q=80",
+      fallback: "https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=1200&q=80",
       desc: "Custom high-gloss acrylic finish modular kitchen featuring Hafele tandem boxes, quartz countertop, and integrated pantry unit."
     },
     {
@@ -19,61 +21,260 @@ document.addEventListener('DOMContentLoaded', () => {
       year: "2024",
       location: "Anna Nagar, Chennai",
       img: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80",
+      fallback: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80",
       desc: "Sleek wooden panelling TV unit with ambient cove lighting, marble floor accents, and custom plush sectional sofa seating."
     },
     {
       id: 3,
-      title: "Royal Master Bedroom & Wardrobe",
-      category: "Bedroom",
-      year: "2023",
-      location: "Mogappair West, Chennai",
-      img: "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=1200&q=80",
-      desc: "Floor-to-ceiling floor sliding glass wardrobe with internal LED motion sensors, upholstered bed backwall, and warm acoustic wood slats."
-    },
-    {
-      id: 4,
-      title: "Elegant Dining & Crockery Unit",
+      title: "Elegant Hall Interior & Dining",
       category: "Living Room",
       year: "2023",
       location: "Padi, Chennai",
       img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80",
+      fallback: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80",
       desc: "Custom fluted glass crockery cabinet with golden metallic trim, stone-top 6 seater dining set, and pendant light chandelier."
     },
     {
-      id: 5,
+      id: 4,
       title: "Compact WFH Executive Office",
       category: "Home Office",
       year: "2023",
       location: "Korattur, Chennai",
       img: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200&q=80",
+      fallback: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200&q=80",
       desc: "Ergonomic work desk setup with hidden cable channels, floating bookshelves, and acoustic slate wall backdrop."
     },
     {
-      id: 6,
+      id: 5,
       title: "Contemporary Walk-In Closet",
       category: "Wardrobe",
       year: "2023",
       location: "Velachery, Chennai",
       img: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=1200&q=80",
+      fallback: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=1200&q=80",
       desc: "Open luxury wardrobe island with velvet ring trays, bronze glass doors, and soft close Blum draw sliders."
+    },
+
+    // --- Real VSK Client Project Photos (port-proj/) ---
+    {
+      id: 6,
+      title: "Modular Kitchen",
+      category: "Modular Kitchen",
+      year: "2022",
+      location: "Ambattur, Chennai",
+      img: "port-proj/IMG-20251013-WA0001.jpg",
+      fallback: "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&q=80",
+      desc: "Bespoke modular kitchen with soft-close tandem boxes and durable BWR marine plywood structure."
     },
     {
       id: 7,
-      title: "Gourmet Kitchen & Island Bar",
-      category: "Modular Kitchen",
-      year: "2023",
-      location: "Avadi, Chennai",
-      img: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80",
-      desc: "Parallel layout modular kitchen with breakfast island, built-in chimney, microwave cavity, and 100% waterproof BWR marine plywood."
+      title: "Luxury Hall",
+      category: "Living Room",
+      year: "2020",
+      location: "Ambattur, Chennai",
+      img: "port-proj/IMG-20251013-WA0002.jpg",
+      fallback: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
+      desc: "Spacious living hall panelling with integrated ambient profile lighting."
     },
     {
       id: 8,
-      title: "Tranquil Kid's Bedroom Suite",
-      category: "Bedroom",
-      year: "2024",
+      title: "Modular Kitchen",
+      category: "Modular Kitchen",
+      year: "2020",
+      location: "Ambattur, Chennai",
+      img: "port-proj/IMG-20251013-WA0003.jpg",
+      fallback: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+      desc: "High-gloss laminated modular kitchen cabinets with quartz stone countertop."
+    },
+    {
+      id: 9,
+      title: "Modular Kitchen",
+      category: "Modular Kitchen",
+      year: "2020",
+      location: "Anna Nagar, Chennai",
+      img: "port-proj/IMG-20251013-WA0004.jpg",
+      fallback: "https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=800&q=80",
+      desc: "Modern parallel kitchen layout featuring smart corner storage solutions."
+    },
+    {
+      id: 10,
+      title: "Modular Kitchen",
+      category: "Modular Kitchen",
+      year: "2020",
+      location: "Mogappair, Chennai",
+      img: "port-proj/IMG-20251013-WA0005.jpg",
+      fallback: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+      desc: "Compact modular kitchen designed for maximum efficiency and storage."
+    },
+    {
+      id: 11,
+      title: "Modular Kitchen",
+      category: "Modular Kitchen",
+      year: "2020",
+      location: "Korattur, Chennai",
+      img: "port-proj/IMG-20251013-WA0006.jpg",
+      fallback: "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&q=80",
+      desc: "L-shaped kitchen layout with premium soft-close hardware."
+    },
+    {
+      id: 12,
+      title: "Classy Wardrobe",
+      category: "Wardrobe",
+      year: "2020",
+      location: "Ambattur OT, Chennai",
+      img: "port-proj/IMG-20251013-WA0007.jpg",
+      fallback: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&q=80",
+      desc: "Floor-to-ceiling wardrobe with dedicated locker and drawer organization."
+    },
+    {
+      id: 13,
+      title: "Stylish Kitchen",
+      category: "Modular Kitchen",
+      year: "2020",
+      location: "Padi, Chennai",
+      img: "port-proj/IMG-20251013-WA0008.jpg",
+      fallback: "https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=800&q=80",
+      desc: "Stylish two-tone laminate kitchen with anti-scratch surfaces."
+    },
+    {
+      id: 14,
+      title: "Modular Kitchen",
+      category: "Modular Kitchen",
+      year: "2020",
+      location: "Avadi, Chennai",
+      img: "port-proj/IMG-20251013-WA0009.jpg",
+      fallback: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+      desc: "Modern modular setup with integrated chimney cavity and pantry unit."
+    },
+    {
+      id: 15,
+      title: "Classy Kitchen",
+      category: "Modular Kitchen",
+      year: "2020",
+      location: "Ambattur, Chennai",
+      img: "port-proj/IMG-20251013-WA0010.jpg",
+      fallback: "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&q=80",
+      desc: "Classy acrylic finish kitchen cabinets with under-cabinet LED strips."
+    },
+    {
+      id: 16,
+      title: "Modular Kitchen",
+      category: "Modular Kitchen",
+      year: "2020",
+      location: "Mogappair West, Chennai",
+      img: "port-proj/IMG-20251013-WA0011.jpg",
+      fallback: "https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=800&q=80",
+      desc: "Ergonomic work triangle kitchen layout."
+    },
+    {
+      id: 17,
+      title: "Modular Kitchen",
+      category: "Modular Kitchen",
+      year: "2020",
+      location: "Velachery, Chennai",
+      img: "port-proj/IMG-20251013-WA0012.jpg",
+      fallback: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+      desc: "Waterproof BWR marine plywood modular kitchen."
+    },
+    {
+      id: 18,
+      title: "Classy Kitchen",
+      category: "Modular Kitchen",
+      year: "2020",
+      location: "Anna Nagar, Chennai",
+      img: "port-proj/IMG-20251013-WA0013.jpg",
+      fallback: "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&q=80",
+      desc: "Custom high-gloss modular kitchen cabinetry."
+    },
+    {
+      id: 19,
+      title: "Modular Kitchen",
+      category: "Modular Kitchen",
+      year: "2020",
       location: "Ambattur Industrial Estate, Chennai",
-      img: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1200&q=80",
-      desc: "Pastel theme bedroom with study nook, built-in wardrobe drawers, and custom wall moulding accents."
+      img: "port-proj/IMG-20251013-WA0014.jpg",
+      fallback: "https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=800&q=80",
+      desc: "Smart modular kitchen with pull-out spice racks."
+    },
+    {
+      id: 20,
+      title: "Modular Kitchen",
+      category: "Modular Kitchen",
+      year: "2020",
+      location: "Korattur, Chennai",
+      img: "port-proj/IMG-20251013-WA0016.jpg",
+      fallback: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+      desc: "Durable marine plywood kitchen with soft-close tandem drawers."
+    },
+    {
+      id: 21,
+      title: "Stylish Bed",
+      category: "Bedroom",
+      year: "2022",
+      location: "Ambattur, Chennai",
+      img: "port-proj/IMG-20251013-WA0017.jpg",
+      fallback: "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80",
+      desc: "Custom upholstered bedframe with integrated side tables."
+    },
+    {
+      id: 22,
+      title: "Modern Bed",
+      category: "Bedroom",
+      year: "2022",
+      location: "Padi, Chennai",
+      img: "port-proj/IMG-20251013-WA0018.jpg",
+      fallback: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80",
+      desc: "Hydraulic storage bedframe with wooden slat backwall."
+    },
+    {
+      id: 23,
+      title: "Stylish Bed",
+      category: "Bedroom",
+      year: "2022",
+      location: "Mogappair, Chennai",
+      img: "port-proj/IMG-20251013-WA0020.jpg",
+      fallback: "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80",
+      desc: "Contemporary bedroom backwall with warm accent lighting."
+    },
+    {
+      id: 24,
+      title: "Stylish Bed",
+      category: "Bedroom",
+      year: "2022",
+      location: "Anna Nagar, Chennai",
+      img: "port-proj/IMG-20251013-WA0021.jpg",
+      fallback: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80",
+      desc: "Minimalist master bedroom suite with study table."
+    },
+    {
+      id: 25,
+      title: "Stylish Wardrobes",
+      category: "Wardrobe",
+      year: "2020",
+      location: "Ambattur OT, Chennai",
+      img: "port-proj/IMG-20251013-WA0022.jpg",
+      fallback: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&q=80",
+      desc: "Custom sliding wardrobe with mirror door panel."
+    },
+    {
+      id: 26,
+      title: "Stylish Wardrobes",
+      category: "Wardrobe",
+      year: "2021",
+      location: "Avadi, Chennai",
+      img: "port-proj/IMG-20251013-WA0023.jpg",
+      fallback: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&q=80",
+      desc: "Spacious dual wardrobe set with top loft storage."
+    },
+    {
+      id: 27,
+      title: "Stylish Bedroom",
+      category: "Bedroom",
+      year: "2021",
+      location: "Korattur, Chennai",
+      img: "port-proj/IMG-20251013-WA0024.jpg",
+      fallback: "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80",
+      desc: "Complete bedroom transformation with study nook and wardrobe."
     }
   ];
 
@@ -199,10 +400,10 @@ document.addEventListener('DOMContentLoaded', () => {
         card.setAttribute('data-id', item.id);
         card.innerHTML = `
           <div class="relative overflow-hidden rounded-2xl shadow-xl transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl">
-            <img src="${item.img}" alt="${item.title}" class="h-96 w-full object-cover transition duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80';">
+            <img src="${item.img}" alt="${item.title}" class="h-96 w-full object-cover transition duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='${item.fallback}';">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent flex items-end">
               <div class="p-6 text-white w-full">
-                <span class="inline-block px-3 py-1 bg-amber-600/80 backdrop-blur-md text-amber-100 text-xs font-semibold rounded-full mb-2">${item.category}</span>
+                <span class="inline-block px-3 py-1 bg-amber-600/80 backdrop-blur-md text-amber-100 text-xs font-semibold rounded-full mb-2">${item.category} • ${item.year}</span>
                 <p class="font-bold text-xl heading-font group-hover:text-amber-400 transition">${item.title}</p>
                 <p class="text-gray-300 text-xs mt-1 flex justify-between items-center">
                   <span>📍 ${item.location}</span>
@@ -235,9 +436,9 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => {
           b.classList.remove('bg-amber-600', 'text-white');
-          b.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+          b.classList.add('bg-slate-900', 'text-slate-300', 'border', 'border-slate-800');
         });
-        btn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+        btn.classList.remove('bg-slate-900', 'text-slate-300', 'border', 'border-slate-800');
         btn.classList.add('bg-amber-600', 'text-white');
         renderPortfolio(btn.getAttribute('data-filter'));
       });
@@ -257,6 +458,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function openLightbox(item) {
     if (!lightboxModal) return;
     lightboxImage.src = item.img;
+    lightboxImage.onerror = () => { lightboxImage.src = item.fallback; };
     lightboxTitle.textContent = item.title;
     lightboxCategory.textContent = item.category;
     lightboxLocation.textContent = `📍 ${item.location} (${item.year})`;
@@ -309,7 +511,7 @@ document.addEventListener('DOMContentLoaded', () => {
       serviceModalWarranty.textContent = specs.warranty;
       serviceModalTimeline.textContent = specs.timeline;
 
-      serviceModalHighlights.innerHTML = specs.highlights.map(h => `<li class="flex items-center text-gray-700"><span class="text-amber-600 mr-2 font-bold">✓</span> ${h}</li>`).join('');
+      serviceModalHighlights.innerHTML = specs.highlights.map(h => `<li class="flex items-center text-slate-300"><span class="text-amber-400 mr-2 font-bold">✓</span> ${h}</li>`).join('');
 
       serviceModal.classList.add('active');
       document.body.style.overflow = 'hidden';
@@ -441,7 +643,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         submitBtn.disabled = false;
         submitBtn.innerHTML = `✓ Enquiry Submitted!`;
-        submitBtn.classList.remove('bg-amber-600', 'hover:bg-amber-700');
+        submitBtn.classList.remove('from-amber-500', 'to-amber-700');
         submitBtn.classList.add('bg-emerald-600');
 
         showToast(`Thank you ${name}! Your consultation request has been received. Our team will contact you at ${phone} within 24 hours.`, 'success');
@@ -454,9 +656,9 @@ document.addEventListener('DOMContentLoaded', () => {
             window.open(`https://wa.me/918838635463?text=${waText}`, '_blank');
           }
           contactForm.reset();
-          submitBtn.innerHTML = `Submit Enquiry`;
+          submitBtn.innerHTML = `Submit Consultation Request`;
           submitBtn.classList.remove('bg-emerald-600');
-          submitBtn.classList.add('bg-amber-600', 'hover:bg-amber-700');
+          submitBtn.classList.add('from-amber-500', 'to-amber-700');
         }, 1500);
 
       }, 1200);
