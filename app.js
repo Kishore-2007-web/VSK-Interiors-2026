@@ -620,26 +620,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- WhatsApp Quick Chat Floating Widget ---
   const whatsappFloat = document.getElementById('whatsapp-float');
-  const whatsappTooltip = document.getElementById('whatsapp-tooltip');
-  const whatsappClose = document.getElementById('whatsapp-close');
   const whatsappPopupCard = document.getElementById('whatsapp-popup-card');
   const whatsappCardClose = document.getElementById('whatsapp-card-close');
 
-  if (whatsappFloat && whatsappTooltip) {
-    // Show tooltip on load after 2 seconds
-    setTimeout(() => {
-      whatsappTooltip.style.display = 'block';
-      if (whatsappClose) whatsappClose.style.display = 'flex';
-    }, 2000);
-
-    if (whatsappClose) {
-      whatsappClose.addEventListener('click', (e) => {
-        e.stopPropagation();
-        whatsappTooltip.style.display = 'none';
-        whatsappClose.style.display = 'none';
-      });
-    }
-
+  if (whatsappFloat) {
     whatsappFloat.addEventListener('click', () => {
       if (whatsappPopupCard) {
         whatsappPopupCard.classList.toggle('hidden');
