@@ -668,4 +668,86 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', checkCounters);
   checkCounters();
+
+  // --- Material & Finish Explorer Guide Tab Filter & Modal ---
+  const materialTabBtns = document.querySelectorAll('.material-tab-btn');
+  const materialCards = document.querySelectorAll('.material-card');
+
+  if (materialTabBtns.length > 0 && materialCards.length > 0) {
+    materialTabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.getAttribute('data-mat-category');
+
+        materialTabBtns.forEach(b => {
+          b.classList.remove('bg-amber-600', 'text-white', 'shadow-lg');
+          b.classList.add('bg-slate-800', 'text-slate-300', 'border', 'border-slate-700');
+        });
+
+        btn.classList.remove('bg-slate-800', 'text-slate-300', 'border', 'border-slate-700');
+        btn.classList.add('bg-amber-600', 'text-white', 'shadow-lg');
+
+        materialCards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          if (category === 'all' || cardCat === category) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // Material Spec Modal Logic
+  const matDetailBtns = document.querySelectorAll('.mat-detail-btn');
+  const matSpecModal = document.getElementById('mat-spec-modal');
+  const matSpecTitle = document.getElementById('mat-spec-title');
+  const matSpecDesc = document.getElementById('mat-spec-desc');
+  const matSpecList = document.getElementById('mat-spec-list');
+  const matSpecClose = document.getElementById('mat-spec-close');
+  const matSpecWaBtn = document.getElementById('mat-spec-wa-btn');
+
+  matDetailBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const title = btn.getAttribute('data-title');
+      const desc = btn.getAttribute('data-desc');
+      const specsRaw = btn.getAttribute('data-specs') || '';
+
+      if (!matSpecModal) return;
+
+      matSpecTitle.textContent = title;
+      matSpecDesc.textContent = desc;
+
+      const specs = specsRaw.split('|').filter(s => s.trim() !== '');
+      matSpecList.innerHTML = specs.map(s => `
+        <li class="flex items-start gap-2 bg-slate-800 p-2.5 rounded-lg border border-slate-700/60">
+          <span class="text-amber-400 font-bold">✓</span>
+          <span class="text-slate-200">${s.trim()}</span>
+        </li>
+      `).join('');
+
+      if (matSpecWaBtn) {
+        matSpecWaBtn.href = `https://wa.me/918838635463?text=Hi%20VSK%20Interiors%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20${encodeURIComponent(title)}%20specifications.`;
+      }
+
+      matSpecModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  if (matSpecClose) {
+    matSpecClose.addEventListener('click', () => {
+      if (matSpecModal) matSpecModal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
+
+  if (matSpecModal) {
+    matSpecModal.addEventListener('click', (e) => {
+      if (e.target === matSpecModal) {
+        matSpecModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
 });

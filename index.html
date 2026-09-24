@@ -38,8 +38,11 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex justify-between items-center">
                 <div class="flex items-center">
                     <a href="#" class="flex items-center gap-3 group">
-                        <img src="./logo.png" alt="VSK Interiors Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
-                        <h1 class="text-2xl sm:text-3xl font-bold heading-font text-gray-900 group-hover:text-amber-600 transition">VSK Interiors</h1>
+                        <img src="./logo.png" alt="VSK Interiors Logo"
+                            class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        <h1
+                            class="text-2xl sm:text-3xl font-bold heading-font text-gray-900 group-hover:text-amber-600 transition">
+                            VSK Interiors</h1>
                     </a>
                 </div>
                 <nav class="hidden md:flex space-x-8">
@@ -271,6 +274,181 @@
                                 <span>Click for Material Specs</span>
                                 <span>→</span>
                             </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Material & Finish Explorer Guide Section -->
+        <section id="materials" class="py-20 bg-slate-900 text-white border-t border-b border-slate-800 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-14">
+                    <span class="text-amber-400 font-bold uppercase tracking-wider text-xs bg-amber-400/10 px-4 py-1.5 rounded-full border border-amber-400/20">
+                        Crafted With Certified Premium Materials
+                    </span>
+                    <h3 class="text-4xl sm:text-5xl font-bold heading-font text-white mt-4 mb-4">
+                        Material & Finish Explorer Guide
+                    </h3>
+                    <p class="text-lg text-slate-300 max-w-3xl mx-auto font-normal">
+                        Understand the superior wood cores, anti-scratch finishes, and European soft-close hardware engineered into every VSK Modular Kitchen & Custom Carpentry project.
+                    </p>
+
+                    <!-- Interactive Filter Tabs -->
+                    <div class="flex flex-wrap justify-center gap-3 mt-8" id="material-tabs">
+                        <button class="material-tab-btn active bg-amber-600 text-white text-xs font-bold px-6 py-3 rounded-full transition shadow-lg flex items-center gap-2" data-mat-category="all">
+                            <span>✨ View All Materials</span>
+                        </button>
+                        <button class="material-tab-btn bg-slate-800 text-slate-300 hover:text-white border border-slate-700 text-xs font-bold px-6 py-3 rounded-full transition flex items-center gap-2" data-mat-category="core">
+                            <span>🪵 Wood & Plywood Cores</span>
+                        </button>
+                        <button class="material-tab-btn bg-slate-800 text-slate-300 hover:text-white border border-slate-700 text-xs font-bold px-6 py-3 rounded-full transition flex items-center gap-2" data-mat-category="finishes">
+                            <span>🎨 Exterior Finishes & Louvers</span>
+                        </button>
+                        <button class="material-tab-btn bg-slate-800 text-slate-300 hover:text-white border border-slate-700 text-xs font-bold px-6 py-3 rounded-full transition flex items-center gap-2" data-mat-category="hardware">
+                            <span>⚙️ Soft-Close Hardware & Stone</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Material Cards Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="material-grid">
+                    <!-- Item 1: BWR Marine Plywood -->
+                    <div class="material-card bg-slate-800/80 rounded-2xl border border-slate-700/80 overflow-hidden hover:border-amber-500/60 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between" data-category="core">
+                        <div>
+                            <div class="h-48 relative overflow-hidden bg-slate-950">
+                                <img src="https://images.unsplash.com/photo-1546484475-7f7bd55792da?w=800&q=80" alt="BWR Marine Plywood" class="w-full h-full object-cover">
+                                <span class="absolute top-3 right-3 bg-emerald-600 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow">100% Waterproof</span>
+                                <span class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-bold text-xs px-3 py-1 rounded-lg border border-amber-400/20">ISO 710 BWR Grade</span>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold heading-font text-white mb-2">BWR Grade Marine Plywood</h4>
+                                <p class="text-slate-300 text-xs leading-relaxed mb-4">Boiling Water Resistant marine plywood bonded with synthetic phenol formaldehyde resin. 100% termite-proof and moisture-resilient core.</p>
+                                <div class="space-y-2 text-xs text-slate-300 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800 mb-4">
+                                    <div class="flex justify-between"><span class="text-slate-400">Best Used For:</span> <span class="text-white font-semibold">Kitchen Cabinets & Sink Area</span></div>
+                                    <div class="flex justify-between"><span class="text-slate-400">Water Resistance:</span> <span class="text-emerald-400 font-bold">100% Boiling Water Proof</span></div>
+                                    <div class="flex justify-between"><span class="text-slate-400">Warranty:</span> <span class="text-amber-400 font-semibold">10 Years Replacement</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <button class="mat-detail-btn w-full bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-white border border-amber-500/30 text-xs font-bold py-2.5 rounded-lg transition" data-title="BWR Grade Marine Plywood" data-desc="Boiling Water Resistant (BWR) Marine Plywood engineered for extreme humidity and direct water contact. Treated with anti-termite chemicals during manufacturing." data-specs="Ideal for Kitchen Under-Sink Units, Bathroom Vanities & Heavy Storage|Resists warping, fungal decay & moisture expansion|10-Year Full Replacement Guarantee">View Technical Details →</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: High-Gloss Acrylic Finish -->
+                    <div class="material-card bg-slate-800/80 rounded-2xl border border-slate-700/80 overflow-hidden hover:border-amber-500/60 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between" data-category="finishes">
+                        <div>
+                            <div class="h-48 relative overflow-hidden bg-slate-950">
+                                <img src="https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=800&q=80" alt="High-Gloss Acrylic Finish" class="w-full h-full object-cover">
+                                <span class="absolute top-3 right-3 bg-amber-600 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow">Mirror Reflective</span>
+                                <span class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-bold text-xs px-3 py-1 rounded-lg border border-amber-400/20">Anti-Scratch Acrylic</span>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold heading-font text-white mb-2">High-Gloss Premium Acrylic</h4>
+                                <p class="text-slate-300 text-xs leading-relaxed mb-4">Mirror-finish acrylic sheets pressed onto high-density boards. Offers flawless reflective sheen, seamless edge banding, and non-fading color clarity.</p>
+                                <div class="space-y-2 text-xs text-slate-300 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800 mb-4">
+                                    <div class="flex justify-between"><span class="text-slate-400">Best Used For:</span> <span class="text-white font-semibold">Modular Kitchen Shutters</span></div>
+                                    <div class="flex justify-between"><span class="text-slate-400">Surface Finish:</span> <span class="text-amber-300 font-bold">Ultra-High Gloss Mirror</span></div>
+                                    <div class="flex justify-between"><span class="text-slate-400">Maintenance:</span> <span class="text-emerald-400 font-semibold">Easy Wipe Clean</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <button class="mat-detail-btn w-full bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-white border border-amber-500/30 text-xs font-bold py-2.5 rounded-lg transition" data-title="High-Gloss Premium Acrylic" data-desc="European-grade acrylic laminates providing a glass-like mirror surface. UV resistant to prevent yellowing or discoloration over time." data-specs="Anti-scratch protective coat|2mm matching PVC seamless edge banding|Zero optical distortion mirror finish">View Technical Details →</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Hettich & Hafele Soft-Close Tandem Hardware -->
+                    <div class="material-card bg-slate-800/80 rounded-2xl border border-slate-700/80 overflow-hidden hover:border-amber-500/60 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between" data-category="hardware">
+                        <div>
+                            <div class="h-48 relative overflow-hidden bg-slate-950">
+                                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80" alt="German Hardware Fittings" class="w-full h-full object-cover">
+                                <span class="absolute top-3 right-3 bg-blue-600 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow">German Engineering</span>
+                                <span class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-bold text-xs px-3 py-1 rounded-lg border border-amber-400/20">Hettich / Hafele / Blum</span>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold heading-font text-white mb-2">Soft-Close Tandem Hardware</h4>
+                                <p class="text-slate-300 text-xs leading-relaxed mb-4">Precision German-engineered soft-close drawer channels, hydraulic lift-up flap systems, and silent 3D adjustable concealed hinges.</p>
+                                <div class="space-y-2 text-xs text-slate-300 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800 mb-4">
+                                    <div class="flex justify-between"><span class="text-slate-400">Load Capacity:</span> <span class="text-white font-semibold">30kg - 65kg per drawer</span></div>
+                                    <div class="flex justify-between"><span class="text-slate-400">Mechanism:</span> <span class="text-blue-400 font-bold">Integrated Hydraulic Cushion</span></div>
+                                    <div class="flex justify-between"><span class="text-slate-400">Tested Cycle:</span> <span class="text-emerald-400 font-semibold">1,00,000 Open/Close Cycles</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <button class="mat-detail-btn w-full bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-white border border-amber-500/30 text-xs font-bold py-2.5 rounded-lg transition" data-title="German Soft-Close Hardware" data-desc="Heavy-duty tandem box drawer channels, bi-fold lift systems, and soft-close hinges from Hettich and Hafele. Eliminates slamming noise and hardware wear." data-specs="Full extension drawer visibility|Corrosion-resistant stainless steel & zinc alloy|Lifetime smooth glide performance">View Technical Details →</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Teak Wood Veneer & PU Polish -->
+                    <div class="material-card bg-slate-800/80 rounded-2xl border border-slate-700/80 overflow-hidden hover:border-amber-500/60 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between" data-category="finishes">
+                        <div>
+                            <div class="h-48 relative overflow-hidden bg-slate-950">
+                                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&q=80" alt="Natural Teak Veneer" class="w-full h-full object-cover">
+                                <span class="absolute top-3 right-3 bg-amber-700 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow">Natural Grain</span>
+                                <span class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-bold text-xs px-3 py-1 rounded-lg border border-amber-400/20">PU Lacquer Finished</span>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold heading-font text-white mb-2">Natural Teak Veneer & PU Finish</h4>
+                                <p class="text-slate-300 text-xs leading-relaxed mb-4">Genuine natural wood timber veneers sealed with multi-coat Polyurethane (PU) clear lacquer polish for timeless luxury warmth.</p>
+                                <div class="space-y-2 text-xs text-slate-300 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800 mb-4">
+                                    <div class="flex justify-between"><span class="text-slate-400">Best Used For:</span> <span class="text-white font-semibold">Living Room TV Walls & Doors</span></div>
+                                    <div class="flex justify-between"><span class="text-slate-400">Coating:</span> <span class="text-amber-300 font-bold">Polyurethane (Matte / Gloss)</span></div>
+                                    <div class="flex justify-between"><span class="text-slate-400">Texture:</span> <span class="text-emerald-400 font-semibold">Authentic Wood Grain</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <button class="mat-detail-btn w-full bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-white border border-amber-500/30 text-xs font-bold py-2.5 rounded-lg transition" data-title="Natural Teak Veneer & PU Polish" data-desc="Real natural teak wood slices bonded to calibrated plywood cores. Coated with Italian PU spray lacquer for heat, stain, and scratch protection." data-specs="Unique natural wood grain patterns|Resistant to yellowing & moisture spots|Rich luxury aesthetic for accent walls">View Technical Details →</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: HDMR Moisture-Resistant Board -->
+                    <div class="material-card bg-slate-800/80 rounded-2xl border border-slate-700/80 overflow-hidden hover:border-amber-500/60 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between" data-category="core">
+                        <div>
+                            <div class="h-48 relative overflow-hidden bg-slate-950">
+                                <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=800&q=80" alt="HDMR Board" class="w-full h-full object-cover">
+                                <span class="absolute top-3 right-3 bg-purple-600 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow">High Density</span>
+                                <span class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-bold text-xs px-3 py-1 rounded-lg border border-amber-400/20">HDMR Grade</span>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold heading-font text-white mb-2">HDMR Moisture-Resistant Board</h4>
+                                <p class="text-slate-300 text-xs leading-relaxed mb-4">High Density Moisture Resistant board with ultra-compact fiber density. Exceptional screw-holding strength and flawless CNC routing adaptability.</p>
+                                <div class="space-y-2 text-xs text-slate-300 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800 mb-4">
+                                    <div class="flex justify-between"><span class="text-slate-400">Best Used For:</span> <span class="text-white font-semibold">Wardrobes, Lofts & Shutters</span></div>
+                                    <div class="flex justify-between"><span class="text-slate-400">Density:</span> <span class="text-purple-300 font-bold">> 850 kg/m³ High Compression</span></div>
+                                    <div class="flex justify-between"><span class="text-slate-400">Feature:</span> <span class="text-emerald-400 font-semibold">Termite & Borer Proof</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <button class="mat-detail-btn w-full bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-white border border-amber-500/30 text-xs font-bold py-2.5 rounded-lg transition" data-title="HDMR Moisture-Resistant Board" data-desc="High Density Moisture Resistant fiberboard crafted using specialized wood chips and adhesive resins under extreme pressure." data-specs="Ideal for complex CNC lattice & jali carving|Zero chipping edge machine finish|Moisture resistant for bedroom & hall furniture">View Technical Details →</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: Quartz & Granite Countertops -->
+                    <div class="material-card bg-slate-800/80 rounded-2xl border border-slate-700/80 overflow-hidden hover:border-amber-500/60 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between" data-category="hardware">
+                        <div>
+                            <div class="h-48 relative overflow-hidden bg-slate-950">
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Quartz Countertop" class="w-full h-full object-cover">
+                                <span class="absolute top-3 right-3 bg-teal-600 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow">Non-Porous Stone</span>
+                                <span class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-bold text-xs px-3 py-1 rounded-lg border border-amber-400/20">Quartz & Granite</span>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold heading-font text-white mb-2">Engineered Quartz & Granite Countertops</h4>
+                                <p class="text-slate-300 text-xs leading-relaxed mb-4">Hygienic, stain-resistant engineered quartz stone slabs with chamfered edge profiles designed for heavy Indian kitchen cooking.</p>
+                                <div class="space-y-2 text-xs text-slate-300 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800 mb-4">
+                                    <div class="flex justify-between"><span class="text-slate-400">Best Used For:</span> <span class="text-white font-semibold">Kitchen Countertops & Breakfast Bars</span></div>
+                                    <div class="flex justify-between"><span class="text-slate-400">Porosity:</span> <span class="text-teal-300 font-bold">Zero Absorption (Stain Proof)</span></div>
+                                    <div class="flex justify-between"><span class="text-slate-400">Heat Tolerance:</span> <span class="text-emerald-400 font-semibold">High Temperature Resistant</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <button class="mat-detail-btn w-full bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-white border border-amber-500/30 text-xs font-bold py-2.5 rounded-lg transition" data-title="Engineered Quartz Countertops" data-desc="93% natural quartz stone combined with polymer resins. Offers anti-bacterial hygiene, zero oil absorption, and scratch resilience." data-specs="Seamless under-mount sink integration|Available in sparkle & marble veined patterns|Easy maintenance with simple soap water">View Technical Details →</button>
                         </div>
                     </div>
 
@@ -599,6 +777,27 @@
             <a href="#contact" onclick="document.getElementById('service-modal').classList.remove('active');"
                 class="w-full block text-center bg-amber-600 hover:bg-amber-700 text-white font-bold py-3.5 rounded-lg text-xs transition shadow">
                 Get Quotation for this Service →
+            </a>
+        </div>
+    </div>
+
+    <!-- Material Technical Spec Modal -->
+    <div id="mat-spec-modal" class="modal-backdrop fixed inset-0 z-[999] flex items-center justify-center p-4 sm:p-6">
+        <div class="modal-content max-w-xl w-full bg-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-2xl relative space-y-6 border border-slate-700">
+            <button id="mat-spec-close" aria-label="Close Modal"
+                class="absolute top-4 right-4 bg-slate-800 hover:bg-red-600 hover:text-white text-slate-300 w-9 h-9 rounded-full flex items-center justify-center transition shadow font-bold">✕</button>
+            <div>
+                <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Certified Technical Specifications</span>
+                <h4 id="mat-spec-title" class="text-2xl font-bold heading-font text-white mt-1"></h4>
+            </div>
+            <p id="mat-spec-desc" class="text-xs text-slate-300 leading-relaxed bg-slate-800/80 p-4 rounded-xl border border-slate-700/80"></p>
+            <div>
+                <h5 class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2.5">Key Performance Specifications</h5>
+                <ul id="mat-spec-list" class="space-y-2 text-xs text-slate-200"></ul>
+            </div>
+            <a id="mat-spec-wa-btn" href="https://wa.me/918838635463?text=Hi%20VSK%20Interiors%2C%20I'm%20interested%20in%20material%20specifications" target="_blank"
+                class="w-full block text-center bg-amber-600 hover:bg-amber-700 text-white font-bold py-3.5 rounded-lg text-xs transition shadow">
+                Inquire About This Material on WhatsApp →
             </a>
         </div>
     </div>
