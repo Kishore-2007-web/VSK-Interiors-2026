@@ -13,6 +13,12 @@
     <meta property="og:description"
         content="Transform your space with Chennai's trusted interior design experts. Modular kitchens, custom wardrobes & full home interiors with 10-year warranty.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="./logo.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="./logo.png">
+    <link rel="shortcut icon" type="image/png" href="./logo.png">
+    <link rel="apple-touch-icon" href="./logo.png">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,9 +35,12 @@
 
         <!-- Header (Matching Reference Image) -->
         <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex justify-between items-center">
                 <div class="flex items-center">
-                    <h1 class="text-2xl sm:text-3xl font-bold heading-font text-gray-900">VSK Interiors</h1>
+                    <a href="#" class="flex items-center gap-3 group">
+                        <img src="./logo.png" alt="VSK Interiors Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        <h1 class="text-2xl sm:text-3xl font-bold heading-font text-gray-900 group-hover:text-amber-600 transition">VSK Interiors</h1>
+                    </a>
                 </div>
                 <nav class="hidden md:flex space-x-8">
                     <a href="#services" class="text-gray-700 hover:text-amber-600 font-medium transition">Services</a>
@@ -487,7 +496,8 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid md:grid-cols-3 gap-8 mb-8">
                     <div>
-                        <div class="flex items-center mb-4">
+                        <div class="flex items-center gap-3 mb-4">
+                            <img src="./logo.png" alt="VSK Interiors Logo" class="h-10 w-auto object-contain">
                             <h4 class="text-2xl font-bold heading-font text-white">VSK Interiors</h4>
                         </div>
                         <p class="text-gray-400 text-sm">Creating beautiful spaces that inspire and delight.</p>
@@ -601,8 +611,9 @@
                 class="absolute top-3 right-3 text-gray-400 hover:text-gray-800 text-xs font-bold">✕</button>
             <div class="flex items-center space-x-3 border-b border-gray-100 pb-3">
                 <div
-                    class="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500 flex items-center justify-center text-emerald-700 font-bold text-xs">
-                    VSK</div>
+                    class="w-10 h-10 rounded-full bg-white border border-amber-500/30 p-1 flex items-center justify-center overflow-hidden shadow-sm">
+                    <img src="./logo.png" alt="VSK Interiors Logo" class="w-full h-full object-contain">
+                </div>
                 <div>
                     <p class="text-xs font-bold text-gray-900">VSK Interiors Support</p>
                     <p class="text-[10px] text-emerald-600 font-semibold">● Online | Ambattur Studio</p>

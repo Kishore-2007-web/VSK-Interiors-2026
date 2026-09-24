@@ -55,7 +55,7 @@ VSK-Interiors-2026/
 ├── index.html        # Main single-page web application structure
 ├── styles.css        # Custom CSS styles, animations, and modal overlays
 ├── app.js            # Main JavaScript controller (Data stores, modals, sliders, events)
-├── logo.svg          # Brand vector logo asset
+├── logo.png          # Brand golden eagle logo image asset
 ├── port-proj/        # Local client project images directory
 ├── .gitignore        # Git ignore directives for OS, IDE, and log files
 ├── .editorconfig     # Code styling rules across editors
